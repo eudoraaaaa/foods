@@ -1,0 +1,218 @@
+/*版面設定*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    transition:0.4 all linear;
+    font: size 22px;
+   
+
+}
+/*第一區header*/
+header{
+
+    font: size 20px;
+    position fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    display: flex;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    background: rgb(255,208,0);
+    box-shadow:10px 1rem 1rem ;
+  rgba(0,0,0.1);
+    opacity:0.9;
+}
+
+header.img{
+    width:50px; height:40px; padding-bottom;-10; filter:saturate(8);
+}
+header.navbar a{
+ font-size;22px;
+  font-weight:normal;
+  color:rgb(9,152,152);
+  padding-left:10px;
+  }
+
+#menu-bar{
+  font-size:25px;
+  cursor:pointer;
+  color:rgb(9,152,152)
+    border:1px solid rgb(9,152,152);
+  border-radius:5px;
+  padding:8px;
+  display:none;
+}
+        
+header.logo{
+  font-size:25px;
+  font-weight:normal;
+  color:rgb(9,152,152);
+}
+
+/*第二區 首頁*/
+        
+section{
+  padding:10px;
+}
+
+.home{
+ display:flex;
+ flex-wrap:wrap;
+  gap:10px;
+  min-height:500px;
+  align-items:center;
+  background:url(../images/background3.jpg)no-repeat;
+  background-size:cover;
+  background-position:center;
+  }
+
+.home.content{
+  flex.1 1 30px;
+  margin-top:60px;
+  padding:50px;
+  background: rgb(2,3,3);
+  background: linear-gradient(90deg, rgba(2,3,3,0.9528011033514968)0%,rgba(255,255,255,0.24411762996214115)100%);
+}
+/*第三區 料理*/
+.heading{
+  text-align:center;
+  font-size:40px;
+  color:red;
+  padding:20px;
+}
+
+.heading span{
+  font-size:20px;
+  color:black
+}
+
+.category.box-container{
+  display:flex;
+  color:black;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.category.box-container.box{
+  
+  flex:1 1 30px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 10px 10px black;
+  border:1px solid black;
+  cursor:pointer;
+  boeder-radius:20px;
+}
+
+
+        
+
+/*第四區 菜單*/
+.heading{
+  text-align:center;
+  font-size:40px;
+  color:blue;
+  padding:20px;
+}
+
+.heading span{
+  font-size:20px;
+  color:black;
+}
+
+.menu.box-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.menu.box-container.box{
+  flex:1 1 10px;
+  padding:10px;
+  box-shadow:5px 5px 5px rgb(140,140,140);
+  border:1px solid rgb(118,118,118);
+  background-size:cover;
+  border-redius:20px;
+  padding-bottom: 30px;
+  height:500px;
+}
+    
+    
+}
+        
+
+/*第五區 圖片*/
+
+
+/* 第六區 評論*/
+        
+/* 第七區 訂購*/
+.order.row{
+  padding:10px;
+  box-shadow:5px 5px 5px rgb(140,140,140);
+  background:white;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  border-radius:20px;
+}
+.order.row.image{
+  flex:1 1 30px;
+}
+
+.order.row form.btn3{
+  font-size:30px;
+  padding:10px;
+  width:100px;
+  boeder-radius:20px;
+  color:black;
+  display:flex;
+  justify-content:center;
+  align_items:center;
+  boeder:5px solid black;
+  
+}
+        
+
+/*第八區 Footer*/
+        
+/*RWL 手機板*/
+
+/* 第一區header */
+@media (max-width:600){
+  #menu-bar{
+    display: initial;
+    position: absolute;
+    right:10px;
+    top:20px;
+  } 
+  header.navbar{
+    position: absolute;
+    top:80px; left:0; right:0;
+    background-color:rgb(255,208,0);
+    border-top:3px solid gray;
+    /*隱藏下拉選單*/
+    clip-path:polydon(0,0,100% 0,0,0);
+  }
+  
+  header.navbar a{
+    /*疊起來*/
+    display: block;
+    font=size:22px;
+    font=weight:normal;
+    color:rgb(20,80,80)
+      margin:10px;padding:6px;
+    border-left:3px solid gray;
+    background-color: white
+  }
+  
+  header.navbar.active{
+    clip-path:polygon(0 0, 100% 0,100% 100%,0 100%);
+    padding:100px;
+  }
+}
